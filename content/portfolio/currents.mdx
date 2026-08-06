@@ -1,0 +1,26 @@
+---
+title: "Currents"
+slug: "currents"
+cover: "/covers/currents.svg"
+role: "Solo Builder"
+year: 2025
+tags: ["data-viz", "side-project"]
+summary: "An ambient dashboard for ocean buoy data — meant to be glanced at, not analyzed."
+links:
+  live: "https://example.com/currents"
+  repo: "https://github.com/example/currents"
+featured: true
+order: 2
+---
+
+Currents is a small weekend project that became a small month project. It pulls live swell, wind, and tide data from a handful of NOAA buoys and renders them as slowly-shifting ribbons. There's no notifications, no alerts, no streaks. It just sits on a second monitor.
+
+## Stack
+
+- **Svelte 5** for the runtime, because reactivity for live data is the one thing Svelte still does best.
+- **D3** for the line/area rendering, but only the parts I couldn't do with SVG paths by hand.
+- **Cloudflare Workers** for the proxy, since some buoy feeds are flaky and I didn't want to write a real backend.
+
+## Why
+
+I built it because the surf cams I actually trusted were all blogs that hadn't updated since 2014. I wanted something that felt like looking at a window.

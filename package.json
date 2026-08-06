@@ -1,0 +1,40 @@
+{
+  "name": "portfolio-blog",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run rss && tsc -b && vite build && cp docs/index.html docs/404.html && touch docs/.nojekyll",
+    "preview": "vite preview --port 4173",
+    "rss": "tsx scripts/build-rss.ts"
+  },
+  "dependencies": {
+    "@mdx-js/react": "^3.0.1",
+    "framer-motion": "^11.3.0",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.408.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.0",
+    "reading-time": "^1.5.0"
+  },
+  "devDependencies": {
+    "@mdx-js/rollup": "^3.0.1",
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "jsdom": "^29.1.1",
+    "postcss": "^8.4.39",
+    "puppeteer-core": "^25.3.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-mdx-frontmatter": "^5.0.0",
+    "tailwindcss": "^3.4.4",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0",
+    "vite": "^5.3.0"
+  }
+}
