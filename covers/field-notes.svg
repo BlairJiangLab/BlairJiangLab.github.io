@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="500" fill="#F5EFE3"/>
+  <g stroke="#3A3025" stroke-width="1.5" fill="none" opacity="0.4">
+    <path d="M0 100 L 800 100"/>
+    <path d="M0 200 L 800 200"/>
+    <path d="M0 300 L 800 300"/>
+    <path d="M0 400 L 800 400"/>
+    <path d="M150 0 L 150 500"/>
+    <path d="M350 0 L 350 500"/>
+    <path d="M550 0 L 550 500"/>
+  </g>
+  <g fill="#3A3025" font-family="Fraunces, Georgia, serif" font-size="120" font-weight="700" font-style="italic">
+    <text x="60" y="280">FN.</text>
+  </g>
+  <g fill="#D2543A">
+    <rect x="600" y="380" width="120" height="3"/>
+  </g>
+</svg>
