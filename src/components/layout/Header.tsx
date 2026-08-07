@@ -26,7 +26,7 @@ export function Header() {
             to="/"
             className="font-serif text-lg font-semibold tracking-tight text-fg dark:text-fg-dark hover:text-accent transition-colors"
           >
-            Atelier
+            Blair
           </Link>
           <nav className="flex items-center gap-1 sm:gap-2">
             {navItems.map((item) => (

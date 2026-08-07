@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <div className="font-serif text-base font-semibold text-fg dark:text-fg-dark">
-              Atelier
+              Blair
             </div>
             <p className="text-sm text-muted dark:text-muted-dark mt-1">
               Selected work and field notes.

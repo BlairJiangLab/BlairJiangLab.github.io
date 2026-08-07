@@ -17,11 +17,13 @@ export function Hero() {
             Portfolio · Notes · Tools
           </div>
           <h1 className="mt-5 font-serif text-5xl sm:text-6xl md:text-7xl font-semibold leading-[1.05] tracking-tight text-fg dark:text-fg-dark">
-            Welcom to <span className="text-accent italic">Blair&apos;s Log</span>
+            Welcome to <span className="text-accent italic">Blair&apos;s Log</span>
           </h1>
           <p className="mt-7 text-lg sm:text-xl text-muted dark:text-muted-dark leading-relaxed max-w-2xl">
-            Product manager, focusing on search and AI, making small tools with Vibe Coding,
-            and also recording practices and thoughts here.
+            <strong>
+              Product manager, focusing on search and AI, selected work{' '}
+              <em>and the thinking</em> behind it
+            </strong>
           </p>
           <div className="mt-10 flex items-center gap-4">
             <Link

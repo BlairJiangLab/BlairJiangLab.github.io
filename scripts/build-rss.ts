@@ -17,9 +17,9 @@ const __dirname = dirname(__filename);
 const root = resolve(__dirname, '..');
 
 const SITE_URL = process.env.SITE_URL || 'https://blairjianglab.github.io';
-const SITE_TITLE = 'Atelier — Notes';
+const SITE_TITLE = 'Blair — Notes';
 const SITE_DESC = 'Field notes on building, design, and tools.';
-const AUTHOR = 'Atelier';
+const AUTHOR = 'Blair';
 
 interface PostFrontmatter {
   title: string;
