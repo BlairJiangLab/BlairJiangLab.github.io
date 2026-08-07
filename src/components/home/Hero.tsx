@@ -20,10 +20,8 @@ export function Hero() {
             Welcome to <span className="text-accent italic">Blair&apos;s Log</span>
           </h1>
           <p className="mt-7 text-lg sm:text-xl text-muted dark:text-muted-dark leading-relaxed max-w-2xl">
-            <strong>
-              Product manager, focusing on search and AI, selected work{' '}
-              <em>and the thinking</em> behind it
-            </strong>
+            Product manager, focusing on search and AI, selected work{' '}
+            <em>and the thinking</em> behind it
           </p>
           <div className="mt-10 flex items-center gap-4">
             <Link
