@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Atelier — Notes</title>
+    <title>Blair — Notes</title>
     <link>https://blairjianglab.github.io</link>
     <description>Field notes on building, design, and tools.</description>
     <language>en-us</language>
     <atom:link href="https://blairjianglab.github.io/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 06 Aug 2026 11:45:48 GMT</lastBuildDate>
-    <managingEditor>Atelier</managingEditor>
+    <lastBuildDate>Fri, 07 Aug 2026 02:38:57 GMT</lastBuildDate>
+    <managingEditor>Blair</managingEditor>
     <item>
       <title><![CDATA[Building Tools That Disappear]]></title>
       <link>https://blairjianglab.github.io/blog/building-tools-that-disappear</link>
