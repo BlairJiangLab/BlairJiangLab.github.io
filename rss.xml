@@ -6,14 +6,24 @@
     <description>Field notes on building, design, and tools.</description>
     <language>en-us</language>
     <atom:link href="https://blairjianglab.github.io/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 24 Aug 2026 13:56:16 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 14:18:54 GMT</lastBuildDate>
     <managingEditor>Blair</managingEditor>
+    <item>
+      <title><![CDATA[医疗专业任务分类标准：基于作用对象与专业目的的 MECE 框架]]></title>
+      <link>https://blairjianglab.github.io/blog/medical-professional-task-classification</link>
+      <guid isPermaLink="true">https://blairjianglab.github.io/blog/medical-professional-task-classification</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[以直接作用对象和专业目的为两级主轴，建立覆盖医疗行业的 4 个一级领域与 24 个二级任务类别。]]></description>
+      <category>医疗</category>
+      <category>任务分类</category>
+      <category>MECE</category>
+    </item>
     <item>
       <title><![CDATA[Remote Sensing Benchmark]]></title>
       <link>https://blairjianglab.github.io/blog/remote-sensing-benchmark</link>
       <guid isPermaLink="true">https://blairjianglab.github.io/blog/remote-sensing-benchmark</guid>
       <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[从真实职业任务和专业交付物出发，设计端到端遥感 AI Benchmark。]]></description>
+      <description><![CDATA[关于如何从真实职业任务和专业交付物出发，设计端到端遥感 AI Benchmark的一些思考]]></description>
       <category>remote sensing</category>
       <category>benchmark</category>
       <category>AI evaluation</category>
