@@ -6,7 +6,7 @@
     <description>Field notes on building, design, and tools.</description>
     <language>en-us</language>
     <atom:link href="https://blairjianglab.github.io/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 24 Aug 2026 13:44:35 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 13:56:16 GMT</lastBuildDate>
     <managingEditor>Blair</managingEditor>
     <item>
       <title><![CDATA[Remote Sensing Benchmark]]></title>
@@ -17,33 +17,6 @@
       <category>remote sensing</category>
       <category>benchmark</category>
       <category>AI evaluation</category>
-    </item>
-    <item>
-      <title><![CDATA[Building Tools That Disappear]]></title>
-      <link>https://blairjianglab.github.io/blog/building-tools-that-disappear</link>
-      <guid isPermaLink="true">https://blairjianglab.github.io/blog/building-tools-that-disappear</guid>
-      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[The best tool I've used this year is the one I forget I'm using. A short note on what it means to design for invisibility.]]></description>
-      <category>tools</category>
-      <category>design</category>
-    </item>
-    <item>
-      <title><![CDATA[On Reading Long-Form]]></title>
-      <link>https://blairjianglab.github.io/blog/on-reading-long-form</link>
-      <guid isPermaLink="true">https://blairjianglab.github.io/blog/on-reading-long-form</guid>
-      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Three small rituals that turned reading back into a daily practice after a year of doom-scrolling.]]></description>
-      <category>reading</category>
-      <category>habits</category>
-    </item>
-    <item>
-      <title><![CDATA[Why I Started Writing Again]]></title>
-      <link>https://blairjianglab.github.io/blog/why-i-started-writing-again</link>
-      <guid isPermaLink="true">https://blairjianglab.github.io/blog/why-i-started-writing-again</guid>
-      <pubDate>Sun, 08 Mar 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Notes on rebuilding a writing practice after a long gap, and the cheap trick that made it stick.]]></description>
-      <category>writing</category>
-      <category>personal</category>
     </item>
   </channel>
 </rss>
