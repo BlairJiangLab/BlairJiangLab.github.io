@@ -41,6 +41,7 @@ function buildRSS() {
     .filter((f) => f !== 'remote-sensing-benchmark.mdx')
     .map((f) => join(postsDir, f));
   files.push(join(root, 'remote-sensing-benchmark-formatted.md'));
+  files.push(join(root, '医疗专业任务分类标准.md'));
 
   const posts = files
     .map((file) => {

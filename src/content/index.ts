@@ -17,6 +17,7 @@ const postModules = import.meta.glob<{
   '@content/posts/*.mdx',
   '!@content/posts/remote-sensing-benchmark.mdx',
   '../../remote-sensing-benchmark-formatted.md',
+  '../../医疗专业任务分类标准.md',
 ], { eager: true });
 
 const pageModules = import.meta.glob<{
