@@ -12,6 +12,7 @@ export default defineConfig({
     {
       enforce: 'pre',
       ...mdx({
+        include: [/\.mdx$/, /remote-sensing-benchmark-formatted\.md$/],
         remarkPlugins: [
           remarkFrontmatter,
           [remarkMdxFrontmatter, { name: 'frontmatter' }],

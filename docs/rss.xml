@@ -6,8 +6,18 @@
     <description>Field notes on building, design, and tools.</description>
     <language>en-us</language>
     <atom:link href="https://blairjianglab.github.io/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 07 Aug 2026 02:38:57 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 13:44:35 GMT</lastBuildDate>
     <managingEditor>Blair</managingEditor>
+    <item>
+      <title><![CDATA[Remote Sensing Benchmark]]></title>
+      <link>https://blairjianglab.github.io/blog/remote-sensing-benchmark</link>
+      <guid isPermaLink="true">https://blairjianglab.github.io/blog/remote-sensing-benchmark</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[从真实职业任务和专业交付物出发，设计端到端遥感 AI Benchmark。]]></description>
+      <category>remote sensing</category>
+      <category>benchmark</category>
+      <category>AI evaluation</category>
+    </item>
     <item>
       <title><![CDATA[Building Tools That Disappear]]></title>
       <link>https://blairjianglab.github.io/blog/building-tools-that-disappear</link>

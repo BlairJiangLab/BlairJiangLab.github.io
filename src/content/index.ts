@@ -13,7 +13,11 @@ const portfolioModules = import.meta.glob<{
 const postModules = import.meta.glob<{
   default: React.ComponentType;
   frontmatter: Record<string, unknown>;
-}>('@content/posts/*.mdx', { eager: true });
+}>([
+  '@content/posts/*.mdx',
+  '!@content/posts/remote-sensing-benchmark.mdx',
+  '../../remote-sensing-benchmark-formatted.md',
+], { eager: true });
 
 const pageModules = import.meta.glob<{
   default: React.ComponentType;

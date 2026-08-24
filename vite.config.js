@@ -20,6 +20,7 @@ export default defineConfig({
     base: '/',
     plugins: [
         __assign({ enforce: 'pre' }, mdx({
+            include: [/\.mdx$/, /remote-sensing-benchmark-formatted\.md$/],
             remarkPlugins: [
                 remarkFrontmatter,
                 [remarkMdxFrontmatter, { name: 'frontmatter' }],

@@ -36,10 +36,15 @@ function buildRSS() {
     return;
   }
 
-  const files = readdirSync(postsDir).filter((f) => f.endsWith('.mdx'));
+  const files = readdirSync(postsDir)
+    .filter((f) => f.endsWith('.mdx'))
+    .filter((f) => f !== 'remote-sensing-benchmark.mdx')
+    .map((f) => join(postsDir, f));
+  files.push(join(root, 'remote-sensing-benchmark-formatted.md'));
+
   const posts = files
-    .map((f) => {
-      const raw = readFileSync(join(postsDir, f), 'utf-8');
+    .map((file) => {
+      const raw = readFileSync(file, 'utf-8');
       const { data } = matter(raw);
       return data as PostFrontmatter;
     })
