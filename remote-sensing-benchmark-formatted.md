@@ -7,7 +7,30 @@ summary: "从真实职业任务和专业交付物出发，设计端到端遥感 
 featured: true
 ---
 
-## 1. 概述
+<nav className="article-toc" aria-label="文章目录">
+  <div className="article-toc-title">目录</div>
+  <ol>
+    <li><a href="#overview">1. 概述</a>
+      <ol>
+        <li><a href="#gdpval-principles">1.1 GDPval 的构造原则</a></li>
+        <li><a href="#related-benchmarks">1.2 现有遥感 Benchmark</a></li>
+      </ol>
+    </li>
+    <li><a href="#task-creation">2. Task Creation</a>
+      <ol>
+        <li><a href="#prioritizing-occupations">2.1 职业选择</a></li>
+        <li><a href="#expert-recruitment">2.2 专家招募</a></li>
+        <li><a href="#task-design">2.3 任务设计</a></li>
+        <li><a href="#quality-control">2.4 任务质量控制</a></li>
+        <li><a href="#grading">2.5 专家与自动评分</a></li>
+      </ol>
+    </li>
+    <li><a href="#limitations">3. Limitations</a></li>
+    <li><a href="#references">参考资料</a></li>
+  </ol>
+</nav>
+
+<h2 id="overview">1. 概述</h2>
 
 现有遥感benchmark主要评估模型的影像理解、专业问答、空间推理和工具调用能力，但较少从真实职业出发，评价模型能否完成可直接交付的工作成果。
 
@@ -15,7 +38,7 @@ featured: true
 
 本文的核心目标是构建一个以遥感相关职业为入口、以真实工作交付物为评测对象、以职业专家评价为主要标准的端到端benchmark。
 
-### 1.1 GDPval的构造原则
+<h3 id="gdpval-principles">1.1 GDPval的构造原则</h3>
 
 GDPval的核心是将AI评测从知识问答转向真实职业交付物，主要遵循以下原则[1]：
 
@@ -39,7 +62,7 @@ $$
 
 这一方法适合迁移到遥感领域，但职业筛选不能简单照搬GDP贡献排序。遥感是跨行业使能技术，应同时考虑职业规模、遥感任务占比和应用代表性。
 
-### 1.2 当前Remote Sensing相关Benchmark情况
+<h3 id="related-benchmarks">1.2 当前Remote Sensing相关Benchmark情况</h3>
 
 传统遥感benchmark主要评价分类、检测、分割和变化检测等单项算法能力；近期benchmark逐渐扩展到多模态问答、工具调用和Agent工作流，但大多按算法、数据集或工具组织，较少依据真实职业任务评价完整工作成果。
 
@@ -50,9 +73,9 @@ $$
 | 多模态理解 | 遥感问答、影像解释、空间推理 | GeoMMBench[14]、GEOBench-VLM[6] | 问答或选择题准确率 | 能回答问题不代表能完成工作 |
 | 工具与Agent | 多步规划、工具调用、GIS或遥感处理 | ThinkGeo[7]、GISAgentBench[8] | 工具、过程及结果正确率 | 较少评价完整职业交付物 |
 
-## 2. Task Creation
+<h2 id="task-creation">2. Task Creation</h2>
 
-### 2.1 Prioritizing Occupations：Benchmark的维度和选取方法
+<h3 id="prioritizing-occupations">2.1 Prioritizing Occupations：Benchmark的维度和选取方法</h3>
 
 不同于GDPval，遥感不是一个独立行业，而是一种跨行业的使能技术。
 
@@ -136,7 +159,7 @@ GDPval采用“行业—职业—任务”的组织逻辑：
 
 五个职业分别覆盖科学分析、数据生产、摄影测量、GIS工作流和测绘更新，形成互补的职业任务结构。农业、林业、水文、环境、灾害、城市和自然资源作为应用场景标签，不再作为独立职业重复抽样。
 
-### 2.2 Expert Recruitment
+<h3 id="expert-recruitment">2.2 Expert Recruitment</h3>
 
 #### 2.2.1 招募标准
 
@@ -175,7 +198,7 @@ GDPval采用“行业—职业—任务”的组织逻辑：
 - 评分标准介绍；
 - 签署参与协议。
 
-### 2.3 Task Creation
+<h3 id="task-design">2.3 Task Creation</h3>
 
 #### 2.3.1 任务结构
 
@@ -499,7 +522,7 @@ Prompt通常在一段完整任务说明中包含以下信息：
 
 > 在明确的职业场景中，使用一组参考文件，完成一项能够在真实工作中交付的完整任务。
 
-### 2.4 Task Quality Control Pipeline
+<h3 id="quality-control">2.4 Task Quality Control Pipeline</h3>
 
 任务质量控制参考GDPval的多阶段审核方法[1]，由模型辅助筛查、通用审核、职业专项审核和最终审核组成。
 
@@ -557,7 +580,7 @@ Prompt通常在一段完整任务说明中包含以下信息：
 
 > 第一轮检查基本合规，第二轮检查职业真实性，第三轮检查可执行性和可评分性，并完成最终验收。
 
-### 2.5 Human Expert Grading and Automated Grading
+<h3 id="grading">2.5 Human Expert Grading and Automated Grading</h3>
 
 人工专家盲评是主要评价方式[1]。本方案进一步规定，每项任务由3名相同职业的专家独立评分，评分者不知道交付物由模型还是人类完成，最终以多数意见确定优于、相当于或差于专家成果的结论。
 
@@ -569,7 +592,7 @@ Prompt通常在一段完整任务说明中包含以下信息：
 
 自动grader在整体pipeline跑通后提升评估效率，可暂不考虑。后续自动grader应在专家已评分样本上校准，并报告与专家评分的一致性；职业判断、结果解释和实际可用性仍由专家评价。
 
-## 3. Limitations
+<h2 id="limitations">3. Limitations</h2>
 
 1. **职业覆盖范围有限**  
    有较多使用遥感技术、但不以遥感为主要工作内容的岗位没有覆盖。
@@ -592,7 +615,7 @@ Prompt通常在一段完整任务说明中包含以下信息：
 7. **数据泄漏与工具依赖风险**  
    公开影像和标准案例可能进入模型训练数据；软件版本、算力和工具可用性也可能影响结果，需要通过分组划分、运行日志和统一环境控制。
 
-## 参考资料
+<h2 id="references">参考资料</h2>
 
 1. Patwardhan et al. [GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks](https://arxiv.org/abs/2510.04374).
 2. OpenAI. [GDPval公开任务数据](https://huggingface.co/datasets/openai/gdpval).
