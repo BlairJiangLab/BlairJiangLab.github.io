@@ -3,7 +3,7 @@ title: "Remote Sensing Benchmark"
 slug: "remote-sensing-benchmark"
 date: 2026-08-24
 tags: ["remote sensing", "benchmark", "AI evaluation"]
-summary: "从真实职业任务和专业交付物出发，设计端到端遥感 AI Benchmark。"
+summary: "关于如何从真实职业任务和专业交付物出发，设计端到端遥感 AI Benchmark的一些思考"
 featured: true
 ---
 
@@ -29,13 +29,13 @@ GDPval的核心是将AI评测从知识问答转向真实职业交付物，主要
 
 GDPval的基本评测单元可表示为：
 
-$$
-\text{Prompt＋参考文件}
-\rightarrow
-\text{模型交付物}
-\rightarrow
-\text{与专家交付物盲法比较}
-$$
+<div className="evaluation-flow" role="img" aria-label="Prompt 与参考文件生成模型交付物，再与专家交付物进行盲法比较">
+  <span>Prompt ＋ 参考文件</span>
+  <span className="evaluation-flow-arrow" aria-hidden="true">→</span>
+  <span>模型交付物</span>
+  <span className="evaluation-flow-arrow" aria-hidden="true">→</span>
+  <span>与专家交付物盲法比较</span>
+</div>
 
 这一方法适合迁移到遥感领域，但职业筛选不能简单照搬GDP贡献排序。遥感是跨行业使能技术，应同时考虑职业规模、遥感任务占比和应用代表性。
 
