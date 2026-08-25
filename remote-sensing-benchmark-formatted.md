@@ -292,19 +292,19 @@ Prompt通常在一段完整任务说明中包含以下信息：
 
 **参考文件**
 
-- `previous_topographic_map.gpkg`
-- `latest_orthophoto.tif`
-- `gnss_survey_points.xlsx`
-- `feature_code_dictionary.xlsx`
-- `mapping_specification.pdf`
-- `project_boundary.gpkg`
+- `previous_topographic_map.gpkg`（上一期1:2000地形图，包含建筑物、道路、水系和高程点等图层及原始要素ID）
+- `latest_orthophoto.tif`（项目区最新无人机正射影像，用于判读地物新增、拆除和位置变化）
+- `gnss_survey_points.xlsx`（补充GNSS测量点，包含点号、平面坐标、高程、采集时间和要素代码）
+- `feature_code_dictionary.xlsx`（地形要素编码、图层归属、属性名称和允许值对照表）
+- `mapping_specification.pdf`（项目测图规范，规定坐标系、精度、拓扑、制图和交付要求）
+- `project_boundary.gpkg`（本次更新工作的项目范围边界）
 
 **要求交付**
 
-- `updated_topographic_map.gpkg`
-- `survey_data_issues.xlsx`
-- `topographic_map.pdf`
-- `update_log.docx`
+- `updated_topographic_map.gpkg`（更新后的地形图数据库，保留规定图层、属性结构和原始要素ID）
+- `survey_data_issues.xlsx`（重复点、坐标异常、高程异常及其他测量数据问题清单）
+- `topographic_map.pdf`（用于检查和汇报的1:2000地形图版面成果）
+- `update_log.docx`（逐项记录新增、删除、修改内容及其数据来源和判断依据）
 
 **关键Rubric**
 
@@ -331,23 +331,23 @@ Prompt通常在一段完整任务说明中包含以下信息：
 
 **参考文件**
 
-- `sentinel1_pre_event.tif`
-- `sentinel1_post_event.tif`
-- `permanent_water.gpkg`
-- `county_boundaries.gpkg`
-- `buildings.gpkg`
-- `roads.gpkg`
-- `validation_points.csv`
-- `data_description.pdf`
+- `sentinel1_pre_event.tif`（灾前Sentinel-1 SAR影像，作为正常地表后向散射基准）
+- `sentinel1_post_event.tif`（灾后Sentinel-1 SAR影像，用于识别新增低后向散射及变化区域）
+- `permanent_water.gpkg`（河流、湖泊等常年水体范围，用于从结果中排除永久水面）
+- `county_boundaries.gpkg`（三个县的行政边界及县名、县代码，用于分区统计）
+- `buildings.gpkg`（研究区建筑物轮廓，用于统计受影响建筑物数量）
+- `roads.gpkg`（道路中心线及道路等级，用于计算受影响道路长度）
+- `validation_points.csv`（已判定为洪水或非洪水的验证样点及坐标，用于独立精度评价）
+- `data_description.pdf`（数据日期、极化方式、分辨率、坐标系、字段及使用限制说明）
 
 **要求交付**
 
-- `flood_extent.tif`
-- `flood_extent.gpkg`
-- `impact_statistics.xlsx`
-- `methodology.docx`
-- `emergency_briefing.pdf`
-- `analysis_script.py`
+- `flood_extent.tif`（新增洪水范围栅格，按规定编码洪水、非洪水和NoData）
+- `flood_extent.gpkg`（新增洪水范围矢量，包含县代码、面积和必要的质量字段）
+- `impact_statistics.xlsx`（分县汇总淹没面积、受影响建筑物数量和道路长度）
+- `methodology.docx`（说明预处理、洪水提取、阈值、后处理、验证和不确定性）
+- `emergency_briefing.pdf`（面向应急管理人员的简报，展示重点受灾区域和主要统计结果）
+- `analysis_script.py`（可复现主要洪水提取和影响统计过程的分析脚本）
 
 **关键Rubric**
 
@@ -374,20 +374,20 @@ Prompt通常在一段完整任务说明中包含以下信息：
 
 **参考文件**
 
-- `submitted_dom.tif`
-- `submitted_dsm.tif`
-- `control_points.xlsx`
-- `independent_checkpoints.xlsx`
-- `aerial_triangulation_report.pdf`
-- `project_boundary.gpkg`
-- `acceptance_standard.pdf`
+- `submitted_dom.tif`（外包单位提交的数字正射影像成果，用于平面精度与影像质量检查）
+- `submitted_dsm.tif`（外包单位提交的数字表面模型，用于高程精度和异常检查）
+- `control_points.xlsx`（空中三角测量使用的像控点坐标及点位信息，仅用于核查控制条件）
+- `independent_checkpoints.xlsx`（未参与空三解算的独立检查点，用于计算平面和高程RMSE）
+- `aerial_triangulation_report.pdf`（外包单位提交的空三处理过程、参数和精度报告）
+- `project_boundary.gpkg`（验收项目的有效空间范围）
+- `acceptance_standard.pdf`（1:2000成果精度、完整性、缺陷等级和验收判定标准）
 
 **要求交付**
 
-- `accuracy_calculation.xlsx`
-- `photogrammetry_defects.gpkg`
-- `acceptance_map.pdf`
-- `quality_inspection_report.docx`
+- `accuracy_calculation.xlsx`（检查点误差、平面RMSE、高程RMSE及限差判定计算表）
+- `photogrammetry_defects.gpkg`（缺陷点或图斑，记录缺陷类型、严重程度和处理建议）
+- `acceptance_map.pdf`（展示项目范围、检查点和缺陷空间分布的验收地图）
+- `quality_inspection_report.docx`（汇总精度计算、质量问题、合格性结论和返工建议的质检报告）
 
 **关键Rubric**
 
@@ -415,23 +415,23 @@ Prompt通常在一段完整任务说明中包含以下信息：
 
 **参考文件**
 
-- `dem.tif`
-- `land_use.gpkg`
-- `major_roads.gpkg`
-- `population_grid.tif`
-- `flood_risk.gpkg`
-- `protected_areas.gpkg`
-- `water_bodies.gpkg`
-- `study_area.gpkg`
-- `site_selection_rules.pdf`
+- `dem.tif`（数字高程模型，用于计算地形坡度）
+- `land_use.gpkg`（土地利用图层，用于筛选允许建设的用地类型）
+- `major_roads.gpkg`（主干道路中心线，用于计算候选地的道路可达距离）
+- `population_grid.tif`（栅格化人口数据，用于估算各候选地可覆盖的人口）
+- `flood_risk.gpkg`（洪水高风险区，属于选址硬性排除范围）
+- `protected_areas.gpkg`（自然保护区等限制建设区域，属于硬性排除范围）
+- `water_bodies.gpkg`（河流、湖泊等水体，用于建立500米避让缓冲区）
+- `study_area.gpkg`（仓库选址分析的研究区边界）
+- `site_selection_rules.pdf`（坡度、距离、面积、排除条件和候选地排序规则）
 
 **要求交付**
 
-- `eligible_sites.gpkg`
-- `site_ranking.xlsx`
-- `recommended_sites_map.pdf`
-- `workflow.py`
-- `method_note.docx`
+- `eligible_sites.gpkg`（满足全部硬约束的连续候选区域及其指标属性）
+- `site_ranking.xlsx`（候选地面积、道路距离、覆盖人口、风险指标和综合排名表）
+- `recommended_sites_map.pdf`（展示约束条件、全部合格区域和前三名推荐地的专题地图）
+- `workflow.py`（可在给定数据上复现筛选、统计和排序过程的GIS脚本）
+- `method_note.docx`（说明数据处理、约束条件、排序方法、推荐理由和局限性）
 
 **关键Rubric**
 
@@ -459,20 +459,20 @@ Prompt通常在一段完整任务说明中包含以下信息：
 
 **参考文件**
 
-- `scene_01.tif`至`scene_06.tif`
-- `scene_metadata.xlsx`
-- `project_boundary.gpkg`
-- `reference_image.tif`
-- `production_specification.pdf`
-- `expected_band_schema.xlsx`
+- `scene_01.tif`至`scene_06.tif`（六景待处理光学卫星影像，可能存在投影、波段、NoData或配准差异）
+- `scene_metadata.xlsx`（各景影像的产品ID、获取日期、传感器、波段、分辨率和投影信息）
+- `project_boundary.gpkg`（最终标准化影像需要覆盖和裁剪的项目范围）
+- `reference_image.tif`（已验证位置精度的参考影像，用于配准和误差检查）
+- `production_specification.pdf`（投影、分辨率、数据类型、NoData、配准精度和质量检查要求）
+- `expected_band_schema.xlsx`（目标波段顺序、波段名称、数据类型和允许值范围）
 
 **要求交付**
 
-- `standardized_mosaic.tif`
-- `scene_processing_log.xlsx`
-- `quality_control.xlsx`
-- `processing_script.py`
-- `production_report.docx`
+- `standardized_mosaic.tif`（完成投影统一、配准、镶嵌和裁剪的标准化多波段影像）
+- `scene_processing_log.xlsx`（逐景记录输入状态、处理步骤、参数、异常及处理决定）
+- `quality_control.xlsx`（输出范围、波段、分辨率、NoData、配准误差和覆盖完整性检查表）
+- `processing_script.py`（可复现主要影像标准化与镶嵌步骤的处理脚本）
+- `production_report.docx`（汇总生产过程、最终成果质量、异常影像和使用限制的报告）
 
 **关键Rubric**
 
